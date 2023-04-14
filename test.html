@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tech Thoughts</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css">
+    <link rel="stylesheet" href="../../public/css/style.css">
+</head>
+<body>
+    <div class="page">
+        <header>
+            <nav>
+                <ul>
+                    <h1>
+                        <a href="/">Tech Thoughts</a>
+                    </h1>
+                </ul>
+                <ul>
+                    {{#if logged_in}}
+                    <a href="/profile">profile</a>
+                    <button id="logout">logout</button>
+                    {{else}}
+                    <a href="/login">login</a>
+                    {{/if}}
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <!-- {{{body}}} -->
+        </main>
+        <footer>
+
+        </footer>
+
+    </div>
+    <!-- {{#if logged_in}}
+    <script src="/js/logout.js"></script>
+    {{/if}} -->
+</body>
+</html>
