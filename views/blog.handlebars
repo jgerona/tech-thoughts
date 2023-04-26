@@ -1,6 +1,3 @@
-{{log blog}}
-{{!-- {{log blog.title}} --}}
-{{!-- {{blog.title}} --}}
 <div>
     <nav>
         <ul>
@@ -18,6 +15,16 @@
     <div>
         <div>
             <strong>Comments</strong>
+            <form id="add-comment">
+                <label for="new-comment">Add Comment:</label>
+                <input type="text" id="new-comment"/>
+                {{log logged_in}}
+                {{#if logged_in}}
+                <button>Submit Comment</button>
+                {{else}}
+                <a href="/login">login to comment</a>
+                {{/if}}
+            </form>
         </div>
         {{#each blog.comments as |comment|}}
         <article>
@@ -32,4 +39,8 @@
         </article>
         {{/each}}
     </div>
+    <div id="hidden" class="{{blog.id}}">{{blog.id}}</div>
+    <div class="hidden blogID" id="{{blog.id}}"></div>
+    <div class="hidden userID" id="{{logged_in}}"></div>
 </div>
+<script src="/js/comment.js">
