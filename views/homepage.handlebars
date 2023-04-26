@@ -1,6 +1,18 @@
-<!-- Loop over each object in the projects array -->
-{{#each blogs as |blog| }}
-<div >
- hi
-</div>
+<!-- Loop over each object in the blogs array -->
+{{#each blogs as |blog|}}
+  <a href="/blog/{{blog.id}}">
+    <article class="blogs">
+      <nav>
+        <ul>
+          {{blog.title}}
+        </ul>
+        <ul>
+          {{format_date blog.date_created}}
+        </ul>
+      </nav>
+      <div class="content">
+        {{blog.content}}
+      </div>
+    </article>
+  </a>
 {{/each}}

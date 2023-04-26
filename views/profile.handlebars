@@ -1,0 +1,39 @@
+<div>
+  <button class="contrast" id="postBtn">Post a Blog!</button>
+  <form id="blog-input">
+    <nav>
+      <div>
+        <label for="blog-title">Title:</label>
+        <input type="text" id="blog-title" />
+      </div>
+    </nav>
+    <nav>
+      <div>
+        <label for="blog-content">Body:</label>
+        <input type="text" id="blog-content" />
+      </div>
+    </nav>
+    <button class="contrast" id="submitBlog">Submit</button>
+  </form>
+</div>
+{{#each user.blogs as |blog|}}
+  <article class="blogs">
+    <nav>
+      <ul>
+        {{blog.title}}
+      </ul>
+      <ul>
+        {{format_date blog.date_created}}
+      </ul>
+    </nav>
+    <div class="content">
+      {{blog.content}}
+    </div>
+    <footer>
+      <a href="/api/update/{{blog.id}}">Update/Delete Post</a>
+    </footer>
+  </article>
+
+{{/each}}
+
+<script src="./js/profile.js"></script>

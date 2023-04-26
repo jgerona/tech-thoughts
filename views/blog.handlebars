@@ -1,0 +1,35 @@
+{{log blog}}
+{{!-- {{log blog.title}} --}}
+{{!-- {{blog.title}} --}}
+<div>
+    <nav>
+        <ul>
+            <h3>{{blog.title}}</h3>
+        </ul>
+        <ul>
+            <div>by {{blog.user.username}} on {{format_date blog.date_created}}</div>
+        </ul>
+    </nav>
+    <div>
+        <ul>
+            <h4>{{blog.content}}</h4>
+        </ul>
+    </div>
+    <div>
+        <div>
+            <strong>Comments</strong>
+        </div>
+        {{#each blog.comments as |comment|}}
+        <article>
+            <nav>
+                <ul>
+                    <div>{{content}}</div>
+                </ul>
+            </nav>
+            <div>
+                by {{comment.user.username}} on {{format_date comment.date_created}}
+            </div>
+        </article>
+        {{/each}}
+    </div>
+</div>

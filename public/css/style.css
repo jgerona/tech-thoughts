@@ -2,3 +2,16 @@
     justify-content: center;
     margin: 20px;
 }
+
+main {
+    margin: 30px;
+}
+
+#blog-input {
+    /* visibility: hidden; */
+    display: none;
+}
+
+#hidden {
+    visibility: hidden;
+}

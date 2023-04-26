@@ -13,16 +13,16 @@
         <header>
             <nav>
                 <ul>
-                    <h1>
-                        <a href="/">Tech Thoughts</a>
-                    </h1>
+                    <h3>
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/profile">Dashboard</a></li>
+                    </h3>
                 </ul>
                 <ul>
                     {{#if logged_in}}
-                    <a href="/profile">profile</a>
-                    <button id="logout">logout</button>
+                    <li><button id="logout">logout</button></li>
                     {{else}}
-                    <a href="/login">login</a>
+                    <li><a href="/login">login</a></li>
                     {{/if}}
                 </ul>
             </nav>

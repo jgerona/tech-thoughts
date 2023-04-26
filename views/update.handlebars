@@ -1,0 +1,36 @@
+<div>
+  <strong>Update Blog</strong>
+  <form id="update-blog-input">
+    <nav>
+      <div>
+        <label for="update-title">New Title:</label>
+        <input type="text" id="update-title" />
+      </div>
+    </nav>
+    <nav>
+      <div>
+        <label for="update-content">New Body:</label>
+        <input type="text" id="update-content" />
+      </div>
+    </nav>
+      <button id="updateBtn">Submit Update</button>
+  </form>
+
+  <nav>
+    <ul>
+      <h3>{{blog.title}}</h3>
+    </ul>
+    <ul>
+      <div>by {{blog.user.username}} on {{format_date blog.date_created}}</div>
+    </ul>
+  </nav>
+  <div>
+    <ul>
+      <h4>{{blog.content}}</h4>
+    </ul>
+  </div>
+  <strong><button id="deleteBtn">Delete</button></strong>
+</div>
+{{log blog.id}}
+  <div id="hidden" class="{{blog.id}}">{{blog.id}}</div>
+<script src="/js/update.js"></script>
